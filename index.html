@@ -1,0 +1,53 @@
+<!doctype>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script type="text/javascript" src="./js/jquery3.js"></script>
+    <script type="text/javascript" src="./js/pdf.js"></script>
+    <script src="./js/main.js"></script>
+  </head>
+  <body>
+  <form action="C:\Python\WebFlask\finalextraction\pypdf1.py" method="post" enctype="multipart/form-data">
+
+		 <div id="json">
+      </div>
+    <div class="row main">
+      <div class="col-md-12 pdf-header">
+	<h2>PDF Format Extractor</h2>
+      </div>
+      <div class="col-md-12 ">
+        <div class="pdf-load">
+		<center>
+	   <!--<button class="btn btn-primary" >Load pdf file</button>
+	 <p>File: <input type="file" name="file"></p>
+	  <p><input type="submit" value="Upload"></p>-->
+	  <input type="file" name="upload" />
+		<input type="submit" />
+		</center>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row" id="detailsContainer"><!--  not_visible -->
+       
+	<div class="col-md-12 row">
+	  <label class="col-md-4" style="background-color:lavenderblush;">Title: </label>
+	  <div class="col-md-8" id="titleText"></div>
+	</div>
+	
+        <div class="col-md-12 row">
+	  <label class="col-md-4" style="background-color:lightcyan;">Author name: </label>
+	  <div class="col-md-8" id="abstract"></div>
+	</div>
+        <div class="col-md-12 row">
+	  <label class="col-md-4" style="background-color:lavenderblush;">Abstract: </label>
+	  <div class="col-md-8" id="abstract-length"></div>
+	</div>
+		
+    <div class="row pdf-container">
+      <iframe id="pdf_iframe col-md-12 " class="pdf-iframe-viewer" src=""></iframe>
+    </div>
+	</form>
+  </body>
+</html>
