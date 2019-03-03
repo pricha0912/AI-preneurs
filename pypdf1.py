@@ -87,3 +87,60 @@ word_tokens = word_tokenize(first_3)
 
 filtered_sentence = [w for w in word_tokens if not w in stop_words]
 
+
+
+
+""" 
+#GET AUTHOR NAME    
+def find_author(some_text):
+    words = some_text.split(" ")
+    words = object(words)
+    emails = []
+    for word in words:
+        if "@" in word:
+            emails.append(word)
+    emails_clean = emails[0].split("\n")
+    actual_email = [a for a in emails_clean if "@" in a]
+    actual_email = actual_email[0]
+    maybe_name = actual_email.split("@")[0]
+    all_words_lists = [a.split("\n") for a in words]
+    words = [a for sublist in all_words_lists for a in sublist]
+    words.remove(actual_email)
+    return difflib.get_close_matches(maybe_name, words)
+
+
+
+def find_intermediate_chars(text, sub1, sub2):
+    pos1 = text.lower().find(sub1) + len(sub1)
+    pos2 = text.lower().find(sub2)
+    if(pos1 > pos2 and pos2 > 0):
+        return text[pos1:pos2]
+	elif(pos2 > pos1 and pos1 > 0):
+	    return text[pos2:pos1]
+	elif(pos1 > 0):
+	    return text[pos1:]
+	elif(pos2 > 0):
+	    return text[pos2:]
+    
+"""
+
+
+"""
+    abstract = re.findall(r'Abstract\nŠTime(.*?)Keywords\nŠ',text)
+    f= open("extractedData1.txt","a+")
+    for i in range(len(text)):
+        f.write(text)
+    f=open("extractedData1.txt", "r")
+    if f.mode == 'r':
+        contents =f.read()
+        print(contents)
+    
+    re.find('(?<=beginningstringname)(.*\n?)(?=endstringname)',text)
+    
+
+
+with open(r'C:/Python/papers/University_related.pdf','rb') as f:
+    extracted_text = slate.PDF(f)
+print(extracted_text)
+"""
+
