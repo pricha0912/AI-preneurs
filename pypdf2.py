@@ -61,6 +61,9 @@ if __name__ == '__main__':
     get_info(path)
     
     text = text_extractor(path)
+    abstract = text[text.find("Abstract")+1:text.find("Keywords")]
+    print(abstract)
+                       
     
     f= open("extractedData1.txt","a+")
     for i in range(len(text)):
@@ -70,7 +73,7 @@ if __name__ == '__main__':
         contents =f.read()
         print(contents)
         
-        
+ """       
 import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
@@ -87,3 +90,4 @@ word_tokens = word_tokenize(first_3)
 
 filtered_sentence = [w for w in word_tokens if not w in stop_words]
 
+"""
