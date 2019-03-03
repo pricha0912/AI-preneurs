@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+</head>
+<body>
+<h1> this is my index page</h1>
+<form method="post" action="{% url 'home' %}">{% csrf_token %}
+   <!-- <input type=text" name="myvalue">
+    <input type="submit" value="submit">-->
+     <input type="file" name="myvalue" />
+    <button type="submit"> Upload file </button></form>
+{% if url %}
+<p>Upload files: <a href ="{{url}}">{{url}}</a></p>
+{% endurl %}
+</body>
+</html>

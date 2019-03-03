@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>{{d1.t1}}</h1>
+<h2>{{d1.cal}}</h2>
+{% for item in context %}
+    <h3> {{item}} </h3>
+{% endfor %}
+<h1>this is mt get value from index.html {{getvalue}} </h1>>
+{% endblock %}
