@@ -1,4 +1,4 @@
-# AI-preneurs using python platform
+# Team name : AI-preneurs (Hackathon Project)
 
 Input: research paper pdf
 
